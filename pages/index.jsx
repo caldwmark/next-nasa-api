@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/future/image'
+import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 
 export const getStaticProps = async () => {
@@ -18,33 +19,46 @@ const Home = ({ nasa }) => {
     return (
         <>
             <Head>
-                <title>Nasa API</title>
+                <title>Astronomy Picture of the Day</title>
                 <meta name='description' content='nasa photos' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <div className={styles.container}>
+                <Header />
                 <main className={styles.main}>
-                    <h1>{nasa.title}</h1>
-
+                    <h2 className={styles.title}>{nasa.title}</h2>
                     <article className={styles.flex}>
-                        <div>
+                        <div className='relative'>
                             <Image
                                 src={nasa.hdurl}
                                 alt={nasa.title}
                                 width={500}
                                 height={500}
                             />
+                            <p class={styles.download}>
+                                <a
+                                    href={nasa.url}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <small>standard image</small>
+                                </a>
+                                &nbsp; &middot; &nbsp;
+                                <a
+                                    href={nasa.hdurl}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <small>hd image</small>
+                                </a>
+                            </p>
                         </div>
-
                         <div className={styles.card}>
+                            <p>{nasa.copyright}</p>
                             <small>{nasa.date}</small>
-                            <br />
-                            <br />
-                            {nasa.explanation}
+                            <p>{nasa.explanation}</p>
                         </div>
                     </article>
-
-                    <div></div>
                 </main>
             </div>
         </>
