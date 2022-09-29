@@ -2,6 +2,7 @@
     margin: 0;
     height: 99px;
     background-color: #080808;
+    color: whitesmoke;
     border-bottom: 1px dotted #333;
     display: flex;
     align-items: center;
