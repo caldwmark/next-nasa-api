@@ -34,6 +34,7 @@ const Home = ({ nasa }) => {
                                 alt={nasa.title}
                                 width={500}
                                 height={500}
+                                priority
                             />
                             <p class={styles.download}>
                                 <a
