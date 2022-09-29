@@ -6,10 +6,46 @@
     border-bottom: 1px dotted #333;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.header h1 {
+.header div {
+    max-width: 1024px;
+}
+
+.logo {
     margin: 0;
+    font-size: 2rem;
+}
+
+.layout {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.list {
+    margin: 1rem 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+.list li {
+    font-size: 1rem;
+    display: inline;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.link {
+    display: inline-block;
+    padding: 0.5em 0 0.5rem 2rem;
 }

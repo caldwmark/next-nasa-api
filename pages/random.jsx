@@ -1,21 +1,23 @@
 import Head from 'next/head'
 import Image from 'next/future/image'
-import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
+import Header from '../components/Header'
 
 export const getStaticProps = async () => {
     const apiKey = 'qfWeWDbohszkauG5Ssyk99GLHW7dgJPAzqZGjwEk'
-    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=1`
 
     const res = await fetch(url)
     const data = await res.json()
 
     return {
-        props: { nasa: data },
+        props: { data: data },
     }
 }
 
-const Home = ({ nasa }) => {
+const Random = ({ data }) => {
+    const nasa = data[0]
+
     return (
         <>
             <Head>
@@ -67,4 +69,4 @@ const Home = ({ nasa }) => {
     )
 }
 
-export default Home
+export default Random
