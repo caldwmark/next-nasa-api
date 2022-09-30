@@ -6,6 +6,8 @@
 
 .image {
     width: 500px;
+    height: auto;
+    object-fit: contain;
     border: 1px solid #222;
     border-radius: 1rem;
 }
