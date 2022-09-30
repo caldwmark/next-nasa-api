@@ -4,13 +4,15 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Features
+### Features
 
 -   Next Image component
--   data fetching
+-   Data fetching
 
-## Content
+### Content
 
-The content is curtosy of NASA.
+The content is being fetched from the NASA API.
+
+### Utilities
 
 [Lighthouse Scores](https://web.dev/measure/?gclid=CjwKCAjw6fyXBhBgEiwAhhiZsomBRG6o3zyMvSZGg-MWoDmu2N2J25HYLMBI9DSUvRZUmHrZ13oLdxoC1v4QAvD_BwE&url=https%3A%2F%2Fnext-nasa-api.vercel.app%2F)
