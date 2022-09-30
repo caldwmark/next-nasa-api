@@ -39,7 +39,7 @@ const Home = ({ nasa }) => {
                                 priority
                                 className={styles.image}
                             />
-                            <p class={styles.download}>
+                            <p className={styles.download}>
                                 <a
                                     href={nasa.url}
                                     target='_blank'
