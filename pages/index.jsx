@@ -3,7 +3,7 @@ import Image from 'next/future/image'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const apiKey = 'qfWeWDbohszkauG5Ssyk99GLHW7dgJPAzqZGjwEk'
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
 
@@ -16,6 +16,8 @@ export const getStaticProps = async () => {
 }
 
 const Home = ({ nasa }) => {
+    const getDate = data => new Date(data).toDateString()
+
     return (
         <>
             <Head>
@@ -57,7 +59,7 @@ const Home = ({ nasa }) => {
                         </div>
                         <div className={styles.card}>
                             <p>{nasa.copyright}</p>
-                            <small>{nasa.date}</small>
+                            <small>{getDate(nasa.date)}</small>
                             <p>{nasa.explanation}</p>
                         </div>
                     </article>
